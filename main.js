@@ -48,17 +48,22 @@ function showProductId(id) {
     
     // getting the datq
     
-        fetch("https://dummyjson.com/products?limit=20")
-    .then(function(response) {
-        return response.json();
-    })
-    .then(function(data) {
-        displayProducts(data.products);
-    })
-    .catch(function(err) {
-        console.error("Error loading products:", err);
-    });
-  
+    const jsonURL = "./data-minifed.json";
 
+    fetch(jsonURL)
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error("HTTP error: " + response.statusText);
+        }
+      })
+      .then(data => {
+        // Pass the products array from data-minifed.json
+        displayProducts(data.products);
+      })
+      .catch(err => {
+        console.error("Error loading products from JSON:", err);
+      });  
 
 
