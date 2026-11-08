@@ -1,0 +1,96 @@
+/* Reset margins and paddings so sizing is predictable */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Page body styling with Verdana font stack and light pink background */
+  body {
+    font-family: "Lucida Sans", Verdana, Arial, sans-serif;
+    background-color: #fff0f5;
+    padding: 24px;
+  }
+  
+  /* Centered content container */
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  /* Page title */
+  h2 {
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: deeppink;
+    margin-bottom: 24px;
+  }
+  
+  /* 3-column product grid */
+  #product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  /* Product card container with border and drop shadow */
+  .card {
+    background-color: #ffffff;
+    border: 1.5px solid #f8bbd0;
+    border-radius: 8px;
+    padding: 14px;
+    box-shadow: 0 4px 8px rgba(233, 30, 99, 0.08);
+  }
+  
+  /* Product thumbnail image */
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    display: block;
+    cursor: pointer;
+    background-color: #fffafc;
+    border-radius: 6px;
+    margin-bottom: 12px;
+  }
+  
+  /* Bottom layout for title, price, and button */
+  .card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Product title */
+  .card-info .title {
+    font-size: 13px;
+    font-weight: bold;
+    color: #4a154b;
+    margin-bottom: 4px;
+  }
+  
+  /* Product price */
+  .card-info .price {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ad1457;
+  }
+  
+  /* Add to cart button */
+  .add-btn {
+    background-color: hotpink;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* Button color change on hover */
+  .add-btn:hover {
+    background-color: #c2185b;
+  }
